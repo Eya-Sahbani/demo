@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node serveur",
-    "dev": "nodemon serveur"
+    "dev": "nodemon serveur",
+    "swagger": "node swagger.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,8 @@
     "dotenv": "^18.0.5",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.10.3"
+    "mongoose": "^9.10.3",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
   }
 }

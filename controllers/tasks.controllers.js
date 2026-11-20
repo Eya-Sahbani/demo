@@ -1,5 +1,5 @@
 import Task from "../models/Task.js";
-export async function getAllTasks(rep, res) {
+export async function getAllTasks(req, res) {
   try {
     const tasks = await Task.find();
 
@@ -9,7 +9,7 @@ export async function getAllTasks(rep, res) {
   }
 }
 
-export async function getTaskById(rep, res) {
+export async function getTaskById(req, res) {
   console.log("id", req.params.id);
   try {
     const task = await Task.findById(req.params.id);
@@ -22,12 +22,12 @@ export async function getTaskById(rep, res) {
   }
 }
 
-export async function createTask(rep, res) {
+export async function createTask(req, res) {
   const newTask = await Task.create(req.body);
   res.status(200).json({ data: newTask });
 }
 
-export async function updateTask(rep, res) {
+export async function updateTask(req, res) {
   console.log(req.body);
   try {
     const task = await Task.findByIdAndUpdate(req.params.id, req.body, {
@@ -43,7 +43,7 @@ export async function updateTask(rep, res) {
   }
 }
 
-export async function deleteTask(rep, res) {
+export async function deleteTask(req, res) {
   await Task.findByIdAndDelete(req.params.id);
   res.status(204).send();
 }
