@@ -2,7 +2,7 @@ import swaggerAutogen from "swagger-autogen";
 //fichier de configuration
 const doc = {
   info: { title: "Tasks API", version: "1.0.0" },
-  servers: [{ url: "http://localhost:3000" }],
+  servers: [{ url: "http://localhost:5000" }],
   components: {
     securitySchemes: {
       bearerAuth: { type: "http", scheme: "bearer", bearerFormat: "JWT" },
